@@ -1,0 +1,12 @@
+<% @employees.each do |name, days| %>
+  <h4><%= name %></h4>
+  <table class="table table-striped">
+    <% days.each do |day, times| %>
+      <tr>
+        <td width="10%"><%= day %></td>
+        <td><%= times[0].strftime('%H:%M') %></td>
+        <td><%= times[1].strftime('%H:%M') %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
