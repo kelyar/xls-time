@@ -3,6 +3,7 @@
 require 'rubyXL'
 require 'sinatra'
 require 'date'
+require 'tilt/erubis'
 
 get '/' do
   redirect '/upload'
