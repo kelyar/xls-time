@@ -18,6 +18,7 @@ post '/upload' do
 
   @employees = {}
   timetable[0].extract_data.each do |row|
+    next if !row || row.compact == []
     dat, point, name = row
 
     @employees[name] ||= {} 
